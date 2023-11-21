@@ -1,0 +1,69 @@
+<div class="container-fluid">
+  <div class="string">
+    <h1>Data Binding</h1>
+    <h5>Oneway Data Binding</h5>
+    <h3>String interpulation</h3>
+    <h2>My name is : {{ firstname }}</h2>
+    <br />
+    <h2>Property binding</h2>
+    <img width="300px" [src]="imagelink" alt="img" />
+    <br /><br />
+    <h2>Event binding</h2>
+    <input type="text" (input)="componentValue($event)" /><br />
+    <br />
+    <!-- Button with Click Event -->
+    <button class="btn btn-primary" (click)="handleButtonClick()">
+      Click me!
+    </button>
+    <div>
+      <br />
+      <h2> binding</h2>
+      <input type="text" [value]="defaultValues" (input)="changeValue($event)" />
+      <br /><br />
+
+      <h5>Twoway Data Binding</h5>
+
+      <h2>NgModel</h2>
+      <input type="text" [(ngModel)]="defaultValue" />
+      &nbsp;&nbsp; <br />
+      <span>{{ defaultValue }}</span>
+    </div>
+  </div>
+  <div class="fetch-data">
+    <h1>Fetch Profile Details from TS</h1>
+    <h2>User Details</h2>
+    <ol class="list">
+      <li><strong>Name:</strong> {{ userDetails.name }}</li>
+      <li><strong>Age:</strong> {{ userDetails.age }}</li>
+      <li><strong>City:</strong> {{ userDetails.address.city }}</li>
+      <li><strong>Country:</strong> {{ userDetails.address.country }}</li>
+      <li><strong>Email:</strong> {{ userDetails.email }}</li>
+    </ol><br><br>
+
+    <!-- table -->
+
+    <h2>User Details</h2><br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">NAME</th>
+          <th scope="col">AGE</th>
+          <th scope="col">CITY</th>
+          <th scope="col">COUNTRY</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let user of users">
+        <tr>
+          <th >{{user.id}} </th>
+          <td> {{user.name}} </td>
+          <td> {{user.age}} </td>
+          <td> {{user.city}} </td>
+          <td> {{user.country}} </td>
+        </tr>
+       
+      </tbody>
+    </table>
+  </div>
+
+</div>

@@ -1,0 +1,32 @@
+.container-fluid {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 35px;
+
+  .string {
+    text-align: center;
+
+    h2 {
+      color: red;
+      font-size: 15px;
+    }
+
+    img {
+      border-radius: 17px;
+    }
+
+  }
+
+  span {
+    color: blue;
+  }
+
+  .fetch-data {
+    text-align: center;
+  }
+
+  .list {
+    text-align: start;
+  }
+ 
+}

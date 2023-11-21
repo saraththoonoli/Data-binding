@@ -1,0 +1,26 @@
+#navigation {
+    font-style: poppins;
+
+    a {
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+
+    img {
+        width: 100px;
+        height: 50px;
+        ;
+    }
+
+    .links {
+        a {
+            font-size: 15px;
+            font-weight: 600;
+            color: brown;
+        }
+
+        :hover {
+            color: blue ;
+        }
+    }
+}
